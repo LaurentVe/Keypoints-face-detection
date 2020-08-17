@@ -29,4 +29,4 @@ A lighter architecture gave similar results.
 This one is composed of 5 Conv blocks (Conv->ReLu->MaxPool) going from 32 to 512 depth with kernel size of 5 for the input then a serie of 3, the last one being 1. Stride of 1, no padding. This is followed by 3 FC layers: 2 x (FC->ReLu->DropOut(0.25)) -> FC with output 136. The feature volumes fed to the FC section is 6 x 6 x 512. This allows to reduce the number of nodes to 1024 then 512 then 136. Next would be to test with BatchNormalization in betwwen the Conv and the activation.
 
 Lighter architecture summary:
-![](sample_architecture.PNG)
+![](asset/sample_architecture.PNG)
