@@ -31,3 +31,9 @@ This one is composed of 5 Conv blocks (Conv->ReLu->MaxPool) going from 32 to 512
 Lighter architecture summary:
 
 ![](asset/sample_architecture.PNG)
+
+## Results
+
+Sample predictions after 40 epochs with the lighter architecture.
+![](asset/sample_outputs.PNG)
+
