@@ -32,7 +32,7 @@ Lighter architecture summary:
 
 ![](asset/sample_architecture.PNG)
 
-The best results were achieved with this lighter architechture adding BatchNormalization in between each of the 5 Convs and the activations. Performance was already better even after 10 epochs.
+The best results were achieved with this lighter architechture adding BatchNormalization in between each of the 5 Convs and the activations. Performance was already better even after 10 epochs. BatchNorm proves to help vanishing gradient issue with deeper CNN (multiple conv blocks).
 
 Best architecture summary:
 
