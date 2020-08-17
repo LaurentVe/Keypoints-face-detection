@@ -26,7 +26,9 @@ Feature extraction looking at the conv1 filters is performed at the end of the N
 From the paper "Facial Key Points Detection using Deep Convolutional Neural Network - NaimishNet", i decided to replicate a similar model made of 4 Conv blocks (Conv-Activation-Maxpool-DropOut), 2 dense blocks (Dense-Activation-DropOut) before a final fully connected layer with 136 outputs (68x2). I stayed as close to the proven solutions. The last layer delivering the predictions is modified compared to the paper. I adjusted the kernel size in the Conv layers and opted for 5 on the larger input image, the following being size of 3. I kept stride to 1 throughout and adjusted padding to maintain xy dimensions leaving the maxpooling(2,2) layers playing its dimensionality-reduction role. The resulting feature volume at the end of the Conv blocks, and before the fully connected section, is 14 x 14 x 256. The FC section outputs 2048 nodes then 1024 then 136.
 
 A lighter architecture gave similar results.
-This one is composed of 5 Conv blocks (Conv->ReLu->MaxPool) going from 32 to 512 depth with kernel size of 5 for the input then a serie of 3, the last one being 1. Stride of 1, no padding. This is followed by 3 FC layers: 2 x (FC->ReLu->DropOut(0.25)) -> FC with output 136. The feature volumes fed to the FC section is 6 x 6 x 512. This allows to reduce the number of nodes to 1024 then 512 then 136. Next would be to test with BatchNormalization in betwwen the Conv and the activation.
+This one is composed of 5 Conv blocks (Conv->ReLu->MaxPool) going from 32 to 512 depth with kernel size of 5 for the input then a serie of 3, the last one being 1. Stride of 1, no padding. This is followed by 3 FC layers: 2 x (FC->ReLu->DropOut(0.25)) -> FC with output 136. The feature volumes fed to the FC section is 6 x 6 x 512. This allows to reduce the number of nodes to 1024 then 512 then 136.
+
+Next: Test with BatchNormalization in between the Convs and the activations.
 
 Lighter architecture summary:
 
