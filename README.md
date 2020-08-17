@@ -43,6 +43,6 @@ Best architecture summary:
 Sample predictions after 40 epochs with the lighter architecture.
 ![](asset/sample_outputs.PNG)
 
-Sample predictions after 40 epochs with the lighter architecture.
+Sample predictions after 10 epochs with the best architecture.
 ![](asset/sample_outputs2.PNG)
 
