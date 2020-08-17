@@ -46,3 +46,5 @@ Sample predictions after 40 epochs with the lighter architecture.
 Sample predictions after 10 epochs with the best architecture.
 ![](asset/sample_outputs2.PNG)
 
+Sample predictions after 30 epochs with the best architecture... Nearly perfect matches ! The model learned very well to determine the 68 facial keypoints even for faces not perfectly centered or aligned in the image. No other model architectures I tried came close to this performance.
+![](asset/sample_outputs3.PNG)
