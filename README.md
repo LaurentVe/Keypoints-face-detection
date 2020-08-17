@@ -28,14 +28,21 @@ From the paper "Facial Key Points Detection using Deep Convolutional Neural Netw
 A lighter architecture gave similar results.
 This one is composed of 5 Conv blocks (Conv->ReLu->MaxPool) going from 32 to 512 depth with kernel size of 5 for the input then a serie of 3, the last one being 1. Stride of 1, no padding. This is followed by 3 FC layers: 2 x (FC->ReLu->DropOut(0.25)) -> FC with output 136. The feature volumes fed to the FC section is 6 x 6 x 512. This allows to reduce the number of nodes to 1024 then 512 then 136.
 
-Next: Test with BatchNormalization in between the Convs and the activations.
-
 Lighter architecture summary:
 
 ![](asset/sample_architecture.PNG)
+
+The best results were achieved with this lighter architechture adding BatchNormalization in between each of the 5 Convs and the activations. Performance was already better even after 10 epochs.
+
+Best architecture summary:
+
+![](asset/best_architecture.PNG)
 
 ## Results
 
 Sample predictions after 40 epochs with the lighter architecture.
 ![](asset/sample_outputs.PNG)
+
+Sample predictions after 40 epochs with the lighter architecture.
+![](asset/sample_outputs2.PNG)
 
